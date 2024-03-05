@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            background-image: linear-gradient(to right, #737fbf, #3434cf);
+            height: 100vh;
+            width: 100vw;
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        h1,
+        div,
+        p {
+            letter-spacing: 1.2px;
+            word-spacing: 3px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        .align {
+            align-items: center;
+        }
+
+        .justify {
+            justify-content: center;
+        }
+
+        .container {
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .gradient {
+            gap: 6rem;
+
+            & .left-gradient-btn,
+            .right-gradient-btn {
+                width: 12rem;
+                height: 6rem;
+                background-color: #29176e;
+                /* font-weight: ; */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                padding: 1rem 1.4rem;
+                border-radius: 3rem;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                cursor: pointer;
+            }
+
+            & .right-gradient-btn {
+                background-color: #89df9b;
+                color: black;
+            }
+        }
+
+        .copy-code {
+            border-left: 3px solid black;
+            padding: 3rem 2rem;
+            width: 35rem;
+            font-size: 2rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+    </style>
+</head>
+
+<body class="flex justify align">
+    <div class="container flex justify align">
+        <h1 id="prev">previous</h1>
+        <div class="gradient flex justify align">
+            <div class="left-gradient-btn">#737fbf</div>
+            <div class="right-gradient-btn">#3434cf</div>
+        </div>
+        <h1>Copy your code here</h1>
+        <div class="copy-code">
+            background-image: linear-gradient(to right, #737fbf, #3434cf);
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
