@@ -42,7 +42,9 @@ function deleteItem ()  {
     const deleteElem = document.querySelector('.newDiv');
     deleteElem.addEventListener ('click', (e) => {
         e.preventDefault();
-        const deleteDiv = document.querySelector('.list')
-        deleteDiv.removeChild();
+        console.log(((e.target).parentNode).parentNode)
+        console.log(e.target);
+        // const deleteDiv = document.querySelector('.list')
+        // deleteDiv.remove();
     })
 }

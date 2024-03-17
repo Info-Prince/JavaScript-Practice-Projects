@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100vh;
+            background-color: #242424;
+            color: white;
+        }
+        .flex, .justify, .align {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .watch {
+            width: 15rem;
+            height: 3.4rem;
+            background-color: #1b252a;
+            border: 2px solid #f1f178;
+            border-radius: 0.4rem;
+            & #watch-para {
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container flex align justify">
+        <div class="watch flex align justify">
+            <p id="watch-para"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
