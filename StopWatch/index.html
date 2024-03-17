@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #242424;
+            color: white;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            height: 100vh;
+            grid-template-columns: 1fr;
+        }
+
+        .container {
+            min-height: 32rem;
+            width: 23rem;
+            background-color: #14171c;
+            border-radius: 1rem;
+        }
+
+        .flex,
+        .align,
+        .justify {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-direction: column;
+            padding: 1rem 0 0;
+        }
+
+        .container .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        #countDown {
+            height: 3rem;
+            min-width: 5rem;
+            background-color: #0d4574;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.3rem;
+            font-size: 3rem;
+            padding: 2rem 1rem;
+        }
+
+        .btn {
+            width: 7rem;
+            height: 2.5rem;
+            padding: 0.3rem 0.5rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            border: 2px solid yellow;
+            background-color: yellow;
+            /* color: white; */
+            font-weight: 600;
+            transition: all 0.2s linear;
+
+            &:hover {
+                background-color: transparent;
+                color: white;
+            }
+        }
+
+        .resetValue {
+            margin-top: 2rem;
+            font-size: 1.4rem;
+            color: #7298e9;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container flex align justify">
+        <p id="countDown">0</p>
+        <div class="buttons grid">
+            <button class="startBtn btn">Start</button>
+            <button class="resetBtn btn">Reset</button>
+            <button class="stopBtn btn">Stop</button>
+            <button class="timeBtn btn">getTime</button>
+            <button class="clearBtn btn">ClearTime</button>
+        </div>
+        <div class="resetValue"></div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
