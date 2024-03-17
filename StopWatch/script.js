@@ -6,15 +6,39 @@ let intervalId ;
 
 
 //EventListener
-document.querySelector('.startBtn').addEventListener('click', startTimer )
+document.querySelector('.startBtn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    startTimer();  
+}  )
 
-document.querySelector('.resetBtn').addEventListener('click', resetTimer )
+document.querySelector('.resetBtn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    resetTimer();  
+}  )
 
-document.querySelector('.stopBtn').addEventListener('click', stopTimer )
 
-document.querySelector('.timeBtn').addEventListener('click', getTime )
+document.querySelector('.stopBtn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    stopTimer();  
+}  )
 
-document.querySelector('.clearBtn').addEventListener('click', celarAll )
+
+document.querySelector('.timeBtn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    getTime();  
+}  )
+
+
+document.querySelector('.clearBtn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    celarAll();  
+}  )
+
 
 
 //functions
@@ -42,7 +66,7 @@ function stopTimer ()   {
 
 function getTime () {
     const newPara = document.createElement("p");
-    newPara.innerText =    `The stop time is ${startCount}`;
+    newPara.innerText =    `The stop time is ${startCount - 1}`;
     console.log(newPara);
     resetValue.appendChild(newPara);
 }
