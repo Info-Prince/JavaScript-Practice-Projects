@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing:  border-box;
+        }
+        body {
+            background-color: #424242;
+            color: white;
+        }
+        .table {
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .periodicTable {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 1rem;
+            grid-template-rows: auto;
+        }
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 2px solid rgb(60, 32, 32);
+            width: 5rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section class="table">
+        <h1>Event Delegation - Perodic Table</h1>
+        <div class="periodicTable">
+            <!-- <div class="flex"></div> -->
+        </div>
+    </section>
+
+    <script>
+        const periodicTable = document.querySelector('.periodicTable')
+        let i = 1
+        for ( i = 1; i <= 50 ; i++) {
+            
+            const tableElem= (`Elem ${i}`, i, `Element ${i}`)
+            periodicTable.appendChild(tableElem);
+        }
+
+        periodicTable.addEventListener ('click', (evnet) => {
+            console.log(event.target);
+            
+            if (target.classList.contains('element')) {
+                const atomicNumber = target.getAttribute ('data-atomic-number')
+                const atomicName = target.getAttribute ('data-element-name')
+
+                alert (`Atomic Number : ${atomicNumber} \nAtomic Name : ${element}`)
+            }
+        })
+
+        function tableElem(symbol, atomicNumber, name)     {
+            let tableElem = document.createElement ('div');
+            tableElem.setAttribute ('class', 'flex');
+            tableElem.innerHTML = symbol;
+
+            tableElem.setAttribute('data-atomic-number', atomicNumber)
+            tableElem.setAttribute('data-element-name', name)
+            return tableElem;
+        }
+
+    </script>
+</body>
+</html>
