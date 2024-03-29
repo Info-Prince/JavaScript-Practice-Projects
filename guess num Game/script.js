@@ -56,9 +56,9 @@ function dispMessage (message) {
 
 function cleanUp (input) {
     inputField.value = "";
-    guesses.innerHTML = `${prevGuesses}, `;
-    remaining.innerHTML = `${10-noOfGuesses}`
+    guesses.innerHTML += `${input}, `;
     noOfGuesses++;
+    remaining.innerHTML = `${11-noOfGuesses}`;
 }
 
 function endGame () {
