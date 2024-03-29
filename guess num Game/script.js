@@ -27,7 +27,7 @@ function validateGuess (input) {
         dispMessage(`Please Enter a Valid input`)
     } else {
         prevGuesses.push(input);
-        if (noOfGuesses > 10) {
+        if (noOfGuesses > 9) {
             //no remaining attempt
             endGame();
             cleanUp (input);
@@ -57,13 +57,15 @@ function dispMessage (message) {
 function cleanUp (input) {
     inputField.value = "";
     guesses.innerHTML = `${prevGuesses}, `;
+    remaining.innerHTML = `${10-noOfGuesses}`
     noOfGuesses++;
-    remaining.innerHTML = `${11-noOfGuesses}`
 }
 
 function endGame () {
     inputField.value = "";
     inputField.setAttribute ('disabled', '');
+    submitBtn.setAttribute ('disabled', '');
+
     
     startOver.innerHTML = `<p class="newGame" style= "padding: 0.5rem 0.9rem;">New Game</p>`;
 
@@ -84,6 +86,7 @@ function newGameFn()   {
         guesses.innerHTML = '';
         remaining.innerHTML = `${11 - noOfGuesses}`;
         inputField.removeAttribute ('disabled');
+        submitBtn.removeAttribute( 'disabled');
         startOver.innerHTML = "";
         dispMessage("");
 
