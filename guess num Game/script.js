@@ -23,7 +23,7 @@ if (playGame) {
 }
 
 function validateGuess (input) {
-    if (input === '' || input < 0 || isNaN(input)) {
+    if (input === '' || input < 0 ||  input > 100 || isNaN(input)) {
         dispMessage(`Please Enter a Valid input`)
     } else {
         prevGuesses.push(input);
